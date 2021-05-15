@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from "react";
 import './Product.css'
-import CardSubscribe from "../CardSubscribe/CardSubscribe";
+import CardSubscribe from "./CardSubscribe/CardSubscribe";
 
 class Product extends Component{
     state= {

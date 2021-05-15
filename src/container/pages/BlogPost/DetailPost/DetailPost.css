@@ -1,0 +1,15 @@
+.detail-post{
+    padding: 20px;
+}
+
+.title-post{
+    font-size: 24px;
+    font-weight: bold;
+    color: #282c34;
+    text-transform: capitalize;
+}
+
+.desc-post{
+    font-size: 16px;
+    color: coral;
+}

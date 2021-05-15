@@ -1,9 +1,15 @@
+//libraries
 import React, {Component, Fragment} from "react";
-import HeaderComponent from "../../component/HeaderComponent/HeaderComponent";
-import Product from "../Product/Product";
-import LifeCycleComponent from "../LifeCycleComponent/LifeCycleComponent";
-import BlogPost from "../BlogPost/BlogPost";
 import {BrowserRouter, Route, Link} from "react-router-dom";
+
+//pages
+import HeaderPage from "../pages/Header/Header";
+import Product from "../pages/Product/Product";
+import LifeCycleComponent from "../pages/LifeCycleComponent/LifeCycleComponent";
+import BlogPost from "../pages/BlogPost/BlogPost";
+import DetailPost from "../pages/BlogPost/DetailPost/DetailPost";
+
+//styling
 import './Home.css';
 
 class Home extends Component{
@@ -22,26 +28,6 @@ class Home extends Component{
     render() {
         return(
             <BrowserRouter>
-            <>
-                <p>Header Component</p>
-                <hr />
-                <HeaderComponent
-                    time={"7.13"}
-                    title={"Feedback 1"}
-                    desc={"This is a great place"}
-                />
-                <HeaderComponent
-                    time={"5.12"}
-                    title={"Feedback 2"}
-                    desc={"This is a great time"}
-                />
-                <HeaderComponent
-                    time={"6.12"}
-                    title={"Feedback 3"}
-                    desc={"This is a great fun"}
-                />
-                <HeaderComponent/>
-            </>
                 <Fragment>
                     <div className={"navigation"}>
                         <Link to={"/"}>Blog Post Component</Link>
@@ -50,9 +36,10 @@ class Home extends Component{
                         <Link to={"/header"}>Header Component</Link>
                     </div>
                             <Route path={"/"} exact component={BlogPost} />
+                            <Route path={"/detail-post/:postID"} component={DetailPost}/>
                             <Route path={"/product"} component={Product} />
                             <Route path={"/lifecycle"} component={LifeCycleComponent} />
-                            <Route path={"/header"} component={HeaderComponent} />
+                            <Route path={"/header"} component={HeaderPage} />
                 </Fragment>
             </BrowserRouter>
         )

@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from "react";
 import './BlogPost.css';
-import Post from "../../component/Post/Post";
+import Post from "../../../component/Post/Post";
 import axios from "axios";
 
 class BlogPost extends Component{
@@ -98,6 +98,10 @@ class BlogPost extends Component{
         }
     }
 
+    handleDetail = (id) => {
+        this.props.history.push(`/detail-post/${id}`);
+    }
+
     componentDidMount() {
         /*fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
@@ -123,12 +127,12 @@ class BlogPost extends Component{
                 </div>
                 {
                     this.state.post.map(post=>{
-                        return <Post key={post.id} data={post} title={post.title} desc={post.body} remove={this.handleRemove} update={this.handleUpdate}/>
+                        return <Post key={post.id} data={post} title={post.title} desc={post.body} remove={this.handleRemove} update={this.handleUpdate} detailpost={this.handleDetail}/>
                     })
                 }
             </Fragment>
         )
     }
-};
+}
 
 export default BlogPost;

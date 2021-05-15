@@ -5,6 +5,10 @@
     color: aliceblue;
 }
 
+.title{
+    cursor: pointer;
+}
+
 .post{
     display: flex;
     width: 500px;
