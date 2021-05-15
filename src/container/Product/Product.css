@@ -1,0 +1,78 @@
+.header{
+    display: flex;
+    background: peachpuff;
+    width: 450px;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 40px;
+}
+
+.subsribe{
+    position: relative;
+}
+
+.subsribe img{
+    width: 30px;
+}
+
+.count{
+    background: black;
+    padding: 10px;
+    border-radius: 50%;
+    min-width: 10px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    color: wheat;
+    font-size: 11px;
+    position: relative;
+    bottom: -8px;
+    left: -13px;
+}
+
+.card{
+    border: 1px solid fuchsia;
+    background: aqua;
+    width: 450px;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 40px;
+}
+
+p.desc{
+    position: absolute;
+    color: wheat;
+    bottom: 6px;
+    right: 6px;
+    margin: 0;
+    background: black;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+p.title{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0px;
+    margin-top: 10px;
+    color: darkolivegreen;
+}
+
+.logo img{
+    width: 100%;
+    height: 118px;
+    overflow: hidden;
+    position: relative;
+}
+
+.subscribe img{
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
